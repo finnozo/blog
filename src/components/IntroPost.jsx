@@ -10,7 +10,7 @@ const IntroPost = () => {
     });
   };
 
-  return <div>IntroPost</div>;
+  return <div>Page Test</div>;
 };
 
 export default IntroPost;
