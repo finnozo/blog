@@ -7,6 +7,7 @@ import GlobalApi from "../Services/GlobalApi";
 
 const Home = () => {
   const [post, setPost] = useState([]);
+  const [orgPost,setOrgPost]=useState([])
 
   useEffect(() => {
     getPost();
@@ -22,12 +23,23 @@ const Home = () => {
         coverImage: item.attributes.coverImage.data.attributes.url,
       }));
       setPost(result);
+      setOrgPost(result);
     });
   };
 
+  const filterPost=(tag)=>{
+    if(tag=='All')
+    {
+      setPost(orgPost);
+      return ;
+    }
+    const result=orgPost.filter(item=>item.tag==tag);
+    setPost(result);
+  }
+
   return (
     <div>
-      <Search />
+      <Search selectedTag={(tag)=>filterPost(tag)} />
       {post.length>0? <IntroPost post={post[0]} />:null}
       {post.length>0? <Blogs posts={post} />:null}
     </div>
