@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "./App.css";
 import Home from "./pages/Home";
-import Header from './Components/Header'
 import { Route, Routes } from "react-router-dom";
 import BlogDetails from "./pages/BlogDetails";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 function App() {
   return (
