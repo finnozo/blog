@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import GlobalApi from "../Services/GlobalApi";
+import { useNavigate } from "react-router-dom";
 const IntroPost = ({ post }) => {
-  console.log(post);
+  const navigate = useNavigate();
   return (
     <div
       className="grid grid-cols-1 cursor-pointer
      md:grid-cols-2 mt-10 px-10 md:px-15 lg:px-32 gap-8"
+     onClick={() => navigate("blog-details/" + post.id)}
     >
       <img
         src={post.coverImage}

@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Blogs = ({ posts }) => {
+  const navigate = useNavigate();
   return (
     <div
       className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
@@ -10,7 +12,7 @@ const Blogs = ({ posts }) => {
         <div
           key={item.id}
           className="m-4 cursor-pointer"
-          onClick={() => navigate("blog-detail/" + item.id)}
+          onClick={() => navigate("blog-details/" + item.id)}
         >
           <img
             src={item.coverImage}

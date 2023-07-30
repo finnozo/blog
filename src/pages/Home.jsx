@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Header from "../components/Header";
 import Search from "../components/Search";
 import IntroPost from "../components/IntroPost";
 import Blogs from "../components/Blogs";
@@ -28,11 +27,9 @@ const Home = () => {
 
   return (
     <div>
-      <Header />
       <Search />
       {post.length>0? <IntroPost post={post[0]} />:null}
       {post.length>0? <Blogs posts={post} />:null}
-      <Footer />
     </div>
   );
 };
