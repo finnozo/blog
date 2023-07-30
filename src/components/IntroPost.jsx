@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import GlobalApi from "../Services/GlobalApi";
-const IntroPost = ({post}) => {
+const IntroPost = ({ post }) => {
   console.log(post);
   return (
     <div
       className="grid grid-cols-1 cursor-pointer
-     md:grid-cols-2 mt-10 px-10 md:px-15 lg:px-32 gap-8">
+     md:grid-cols-2 mt-10 px-10 md:px-15 lg:px-32 gap-8"
+    >
       <img
         src={post.coverImage}
         className="
