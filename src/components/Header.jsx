@@ -15,6 +15,6 @@ const Header = () => {
       </button>
     </div>
   );
-};ß
+};
 
 export default Header;
