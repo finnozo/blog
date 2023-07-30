@@ -31,7 +31,7 @@ const Home = () => {
       <Header />
       <Search />
       {post.length>0? <IntroPost post={post[0]} />:null}
-      <Blogs />
+      {post.length>0? <Blogs posts={post} />:null}
       <Footer />
     </div>
   );
