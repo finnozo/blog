@@ -2,9 +2,9 @@ import { useState } from "react";
 import "./App.css";
 import Home from "./pages/Home";
 import Header from './Components/Header'
-import Footer from './Components/Footer'
 import { Route, Routes } from "react-router-dom";
 import BlogDetails from "./pages/BlogDetails";
+import Footer from "./components/Footer";
 
 function App() {
   return (
